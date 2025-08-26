@@ -35,7 +35,7 @@ function App() {
       <Search location={location} handleChange={handleChange} handleSubmit={(e) => handleSubmit(e, location)}/>
       {data && (
         <p>
-          {data.main ? `${data.name}: ${data.main.temp}°F, with ${data.weather[0].main} skies. The wind speed is ${data.wind.speed} mph` : "Loading..."}
+          {data.main ? `${data.name}: ${Math.round(data.main.temp)}°F, with ${data.weather[0].main} skies. The wind speed is ${Math.round(data.wind.speed)} mph` : "Loading..."}
         </p>
       )}
 
